@@ -1,13 +1,23 @@
-import Apple from "./Header"
-
 function App(){
-  return(
-   <div>
-    <Apple/>
-    <h1>Hello first code</h1>
 
-    </div> 
+  // alert(sum())
+  return(
+    <div>
+    <h1>First component of react {sum()}</h1>
+      <Fruit />
+
+    </div>
   )
 }
 
-export default App
+function Fruit(){
+  return(
+    <h1>Apple </h1>
+  )
+}
+
+function sum(){
+  return 10+10
+}
+
+export default App;
