@@ -1,22 +1,18 @@
+import { useState } from "react";
+import Counter from "./counter";
 function App(){
-  function callFun(){
-    alert("function called")
+const [fruit, kuchhbhii]=useState("Apple");
+  const handleFruite=()=>{
+    kuchhbhii("Banana")
   }
-
-  const fruit=(name)=>{
-    alert(name)
-  }
-
   return(
     <div>
-      <h1>Event and function call</h1>
-      <button onClick={callFun}>nn</button>
-      <button onClick={()=>fruit("apple")}>Appleeee</button>
-      <button onClick={()=>fruit("apple")}>Banana</button>
+      <h1>State in React Js</h1>
+      <h1>{fruit}</h1>
+      <button onClick={handleFruite}>Chage the name </button>
+      <Counter />
     </div>
   )
-} 
-
-// onclick call itself it want defination of function okk 
+}
 
 export default App
