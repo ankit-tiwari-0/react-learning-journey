@@ -1,17 +1,17 @@
 import { useState } from "react";
-import Counter from "./counter";
 function App(){
-const [fruit, kuchhbhii]=useState("Apple");
-  const handleFruite=()=>{
-    kuchhbhii("Banana")
-  }
+  const [display, setdisplay]=useState(true)
   return(
-    <div>
-      <h1>State in React Js</h1>
-      <h1>{fruit}</h1>
-      <button onClick={handleFruite}>Chage the name </button>
-      <Counter />
-    </div>
+    <>
+    <h1>Toggle in React js</h1>
+    <button onClick={()=>setdisplay(!display)}>Toggle</button>
+
+    {
+      display? <h1>Ankitaaaaaaaaaa</h1>
+      :null
+    }
+    </>
+    
   )
 }
 
