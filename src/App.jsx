@@ -1,14 +1,18 @@
 import { useState } from "react";
 function App(){
-  const [display, setdisplay]=useState(true)
+  const [count, setcount]=useState(0);
   return(
     <>
-    <h1>Toggle in React js</h1>
-    <button onClick={()=>setdisplay(!display)}>Toggle</button>
-
+    <h1>MUltiple condition in react</h1>
+    <h1>{count}</h1>
+    <button onClick={()=>setcount(count+1)}>counter</button>
     {
-      display? <h1>Ankitaaaaaaaaaa</h1>
-      :null
+      count==0?<h1>condition 1</h1>
+      :count==2?<h1>condition 2</h1>
+      :count==3?<h1>condition 3</h1>
+      :count==4?<h1>condition 4</h1>
+      :count==5?<h1>condition 5</h1>
+      :<h1>other</h1>
     }
     </>
     
