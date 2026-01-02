@@ -1,21 +1,41 @@
-import { useState } from "react";
+import { useState } from "react"
+import Collage from "./collage"
+import Student from "./student"
+import User from "./user"
+
 function App(){
-  const [count, setcount]=useState(0);
+  // let username = "ankite"
+  // let age = 21
+  // let gmail = "@ankita.com"
+ let obj= {
+  Name : "ankit",
+  age :"21",
+  gmail : "@akite.gmail"
+
+ }
+
+ let obj2= {
+  Name : "anki",
+  age :"21",
+  gmail : "@akite.gmail"
+
+ }
+
+ let array = ['ggsgsg', 'bssgsg', 'hhhhh']
+ const [student, setstudent]=useState("")
+
+
   return(
-    <>
-    <h1>MUltiple condition in react</h1>
-    <h1>{count}</h1>
-    <button onClick={()=>setcount(count+1)}>counter</button>
-    {
-      count==0?<h1>condition 1</h1>
-      :count==2?<h1>condition 2</h1>
-      :count==3?<h1>condition 3</h1>
-      :count==4?<h1>condition 4</h1>
-      :count==5?<h1>condition 5</h1>
-      :<h1>other</h1>
-    }
-    </>
-    
+    <div>
+      <h1>Props in react</h1>
+      {student && <Student Name= {"saMMMMMMMMMMMM"}/>}
+      <button onClick={()=>setstudent("bholu")}>update name</button>
+      <Collage araaa= {array[0]}/>
+      <User user={obj} />
+      <User user={obj2} />
+
+      {/* <User name = {username} age={age} gmail={gmail} /> */}
+    </div>
   )
 }
 
