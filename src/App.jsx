@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useState } from "react"
 
 function App(){
-const[val, setval]=useState("")    
+  const [name,setname]=useState('');
+  const [password,setpass]=useState('');
+  const [gmail,setgmail]=useState('');
     return(
-
         <div>
-            <h1>Get input field Value</h1>
-            <input type="text"value={val} onChange={(event)=>setval(event.target.value)} placeholder="" />
-            <h1>{val}</h1>
-            <button onClick={()=>setval("")}>clear</button>
+            <h1>ConTroller component</h1>
+            <form action="" method="get">
+                <input type="text" onChange={(e)=>setname(e.target.value)} placeholder="enter name" />
+                <br />
+                <input type="text" onChange={(e)=>setpass(e.target.value)} placeholder="Password" />
+                <br />
+                <input type="text" onChange={(e)=>setgmail(e.target.value)} placeholder="Gmail" />
+                <br />
+                <button>submit</button>
+                <button onClick={()=>{setgmail('');setname();setpass()}}>clear</button>
+                <h4>{name}</h4>
+                <h4>{password}</h4>
+                <h4>{gmail}</h4>
+            </form>
         </div>
     )
 }
+
 export default App;
