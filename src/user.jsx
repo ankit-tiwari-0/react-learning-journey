@@ -1,11 +1,12 @@
-function User({user}){
+function User({name = "new user"}){
+    // default props
     return(
-        <div>
-            <hr />
-            <h1>name:{user.Name}</h1>
-            <h1>age:{user.age}</h1>
-            <h2>gmail:{user.gmail}</h2>
-        </div>
+     <div>
+      <h1>hi,{name}</h1>    
+    </div>
     )
-}
+        
+    
+} 
+
 export default User;

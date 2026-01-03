@@ -1,42 +1,29 @@
-import { useState } from "react"
-import Collage from "./collage"
-import Student from "./student"
-import User from "./user"
+import User from "./user";
+import Wrapper from "./wrapper";
 
 function App(){
-  // let username = "ankite"
-  // let age = 21
-  // let gmail = "@ankita.com"
- let obj= {
-  Name : "ankit",
-  age :"21",
-  gmail : "@akite.gmail"
-
- }
-
- let obj2= {
-  Name : "anki",
-  age :"21",
-  gmail : "@akite.gmail"
-
- }
-
- let array = ['ggsgsg', 'bssgsg', 'hhhhh']
- const [student, setstudent]=useState("")
-
-
-  return(
+    return(
     <div>
-      <h1>Props in react</h1>
-      {student && <Student Name= {"saMMMMMMMMMMMM"}/>}
-      <button onClick={()=>setstudent("bholu")}>update name</button>
-      <Collage araaa= {array[0]}/>
-      <User user={obj} />
-      <User user={obj2} />
+     <h1>Props in reactjs</h1>
+     {/* <User name={"ankitee"} />
+     <User name={"ankit"} />
+     <User  /> */}
 
-      {/* <User name = {username} age={age} gmail={gmail} /> */}
+     <Wrapper color="orange" > 
+      <h1>heloo,everyone</h1>
+     </Wrapper>
+
+      <Wrapper> 
+      <h1>I'm ankitee</h1>
+     </Wrapper>
+
+      <Wrapper> 
+         <h1>heloo,naa</h1>
+        <h2 style={{color:"pink"}}>please goo</h2>
+        </Wrapper>
+
     </div>
-  )
+    )
 }
 
-export default App
+export default App;
