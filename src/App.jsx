@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function App(){
     const [gender, setgender]=useState("");
+    const [city, setcity]=useState("Noida");
     return(
         <div>
             <h1>Handle Radio and Dropdown</h1>
@@ -19,6 +20,15 @@ function App(){
             <label style={{fontSize: "20px", color: "blue", margin: "10px"}} htmlFor="other">Other</label>
 
             <h2>selected Gender: {gender}</h2>
+            <h3 style={{marginTop:"50px", }}>Select city</h3>
+            <select onChange={(e)=>setcity(e.target.value)} defaultValue={"Noida"} style={{ transform: "scale(1.6)", margin: "20px", }} >
+                <option style={{color:"red",}} value="Noida">noida</option>
+                <option value="Delhi" >nnnnn</option>
+                <option value="Agra">dddd</option>
+                <option value="Usmanpur">aaaa</option>
+            </select>
+              <h2>Selected:{city}</h2>
+
         </div>
     )
 }
