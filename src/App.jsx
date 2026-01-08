@@ -1,3 +1,5 @@
+import Practice from "./practice";
+
 function App() {
     const users = [
         {
@@ -92,6 +94,7 @@ function App() {
                     </tr>
                 </tbody>
             </table>
+            <Practice />
         </div>
     )
 }
