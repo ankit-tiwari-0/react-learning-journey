@@ -1,102 +1,110 @@
-import Practice from "./practice";
+import Use from "./reuse";
 
-function App() {
-    const users = [
+function Appp(){
+     const userData = [
         {
-            name: 'ankit',
-            age: '14',
-            email: 'ani@gmail.com',
-            id: '1'
+            Name:'vivek',
+            Age:'25',
+            Height:'6.2',
+            Gmail:'vivek@gmail.com',
+            ID:'1',
+            Gender:'Male'
         },
-        {
-            name: 'anki',
-            age: '14',
-            email: 'ani@gmail.com',
-            id: '2'
+         {
+            Name:'sahil',
+            Age:'28',
+            Height:'6.0',
+            Gmail:'sahil@gmail.com',
+            ID:'2',
+            Gender:'Male'
         },
-        {
-            name: 'ant',
-            age: '10',
-            email: 'ani@gmail.com',
-            id: '4'
+         {
+            Name:'neha',
+            Age:'22',
+            Height:'5.2',
+            Gmail:'neha@gmail.com',
+            ID:'3',
+            Gender:'Female'
         },
-        {
-            name: 'ank',
-            age: '14',
-            email: 'ani@gmail.com',
-            id: '4'
+         {
+            Name:'Noorin',
+            Age:'20',
+            Height:'5.5',
+            Gmail:'noorin@gmail.com',
+            ID:'4',
+            Gender:'feMale'
         },
-        {
-            name: 'kit',
-            age: '15',
-            email: 'ani@gmail.com',
-            id: '5'
+         {
+            Name:'Afreeen',
+            Age:'25',
+            Height:'5.2',
+            Gmail:'Afreen@gmail.com',
+            ID:'5',
+            Gender:'feMale'
         },
+         {
+            Name:'pooja',
+            Age:'25',
+            Height:'6.2',
+            Gmail:'pooja@gmail.com',
+            ID:'6',
+            Gender:'female'
+        },
+         {
+            Name:'kartina',
+            Age:'55',
+            Height:'6.2',
+            Gmail:'katrina@gmail.com',
+            ID:'7',
+            Gender:'feMale'
+        },
+         {
+            Name:'tooba',
+            Age:'15',
+            Height:'6.2',
+            Gmail:'tooba@gmail.com',
+            ID:'8',
+            Gender:'feMale'
+        },
+         {
+            Name:'Ali',
+            Age:'25',
+            Height:'5.2',
+            Gmail:'ali@gmail.com',
+            ID:'9',
+            Gender:'feMale'
+        },
+         {
+            Name:'Alok',
+            Age:'25',
+            Height:'6.2',
+            Gmail:'alok@gmail.com',
+            ID:'10',
+            Gender:'Male'
+        },
+         {
+            Name:'Arshi',
+            Age:'25',
+            Height:'5.2',
+            Gmail:'mine@gmail.com',
+            ID:'11',
+            Gender:'feMale'
+        },
+        
     ]
-    return (
+    return(
         <div>
-            <h1>Loop in jsx Map function </h1>
-            <h3>Dynamic data with loop</h3>
-            <table border={"2px"}>
-                <thead>
-                    <tr>
-                        <td>id</td>
-                        <td>name</td>
-                        <td>Gmail</td>
-                        <td>Age</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        users.map((user) => (
-                            <tr key={user.id}>
-                                <td>{user.id}</td>
-                                <td>{user.name}</td>
-                                <td>{user.email}</td>
-                                <td>{user.age}</td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
-            <h3>Dummy data without loop</h3>
-            <table border={1}>
-                <thead>
-                    <tr>
-                        <td>id</td>
-                        <td>name</td>
-                        <td>email</td>
-                        <td>age</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>anil</td>
-                        <td>anil@gmail.com</td>
-                        <td>21</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>anil</td>
-                        <td>anil@gmail.com</td>
-                        <td>21</td>
-                    </tr><tr>
-                        <td>1</td>
-                        <td>anil</td>
-                        <td>anil@gmail.com</td>
-                        <td>21</td>
-                    </tr><tr>
-                        <td>1</td>
-                        <td>anil</td>
-                        <td>anil@gmail.com</td>
-                        <td>21</td>
-                    </tr>
-                </tbody>
-            </table>
-            <Practice />
+            <h1>Reuse component in loop</h1>
+            {
+                userData.map((user)=>(
+                    <div key={user.ID}>
+                     <Use useee = {user} />
+                    </div>
+
+                ))
+            }
         </div>
     )
 }
 
-export default App;
+export default Appp;
