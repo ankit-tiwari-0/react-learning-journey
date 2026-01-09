@@ -1,21 +1,106 @@
-import { useState } from "react";
-import Clock from "./clock";
+import Colll from "./collagecom"
 
 function App(){
-    const  [color, setcolor] = useState("green") 
+    const collageData = [
+        {
+            name:"IET Alwar",
+            city: "Alwar",
+            Website:"www.iet.com",
+            student:[
+            {
+          Name:'Ankite ',
+          Age:'21',
+          Email:'@ankit.com ' 
+        },
+        {
+          Name:'neha ',
+          Age:'12',
+          Email:'@neha.cpm ' 
+        },
+        {
+          Name:'priyanka ',
+          Age:'255',
+          Email:'@priyanka.com ' 
+        },
+        {
+          Name:' Dholu',
+          Age:'85',
+          Email:'@Dholu.com ' 
+        },
+            ]
+        },
+        {
+            name:"IIT Delhi",
+            city: "Alwar",
+            Website:"www.iet.com",
+            student:[
+            {
+          Name:'Ankite ',
+          Age:'21',
+          Email:'@ankit.com ' 
+        },
+        {
+          Name:'neha ',
+          Age:'12',
+          Email:'@neha.cpm ' 
+        },
+        {
+          Name:'priyanka ',
+          Age:'255',
+          Email:'@priyanka.com ' 
+        },
+        {
+          Name:' Dholu',
+          Age:'85',
+          Email:'@Dholu.com ' 
+        },
+            ]
+        },
+        {
+            name:"SHAYAM LAL",
+            city: "Alwar",
+            Website:"www.iet.com",
+            student:[
+            {
+          Name:'Ankite ',
+          Age:'21',
+          Email:'@ankit.com ' 
+        },
+        {
+          Name:'neha ',
+          Age:'12',
+          Email:'@neha.cpm ' 
+        },
+        {
+          Name:'priyanka ',
+          Age:'255',
+          Email:'@priyanka.com ' 
+        },
+        {
+          Name:' Dholu',
+          Age:'85',
+          Email:'@Dholu.com ' 
+        },
+            ]
+        },
+        
+    ]
     return(
-        <div>
-            <h1>Digital Clock in Reactjs </h1>
-            <select onChange={(e)=>setcolor(e.target.value)} >
-                <option value={"red"}>Red</option>
-                <option value={"pink"}>Pink</option>
-                <option value={"orange"}>Orange</option>
-                <option value={"green"}>Green</option>
-                <option value={"blue"}>BLUE</option>
-            </select>
-            <Clock color={color} />
+      <div>
+        <h1>Nested Looping with component</h1>
+        
+             {
+            collageData.map((coll, index)=>(
+            <div key={index}>
+                <Colll call={coll}/>
+                </div>
+            ))
+             }
+        
 
-        </div>
+        
+      
+      </div>
     )
 }
-export default App;
+export default App
