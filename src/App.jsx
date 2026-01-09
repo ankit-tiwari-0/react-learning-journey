@@ -1,110 +1,21 @@
-import Use from "./reuse";
+import { useState } from "react";
+import Clock from "./clock";
 
-function Appp(){
-     const userData = [
-        {
-            Name:'vivek',
-            Age:'25',
-            Height:'6.2',
-            Gmail:'vivek@gmail.com',
-            ID:'1',
-            Gender:'Male'
-        },
-         {
-            Name:'sahil',
-            Age:'28',
-            Height:'6.0',
-            Gmail:'sahil@gmail.com',
-            ID:'2',
-            Gender:'Male'
-        },
-         {
-            Name:'neha',
-            Age:'22',
-            Height:'5.2',
-            Gmail:'neha@gmail.com',
-            ID:'3',
-            Gender:'Female'
-        },
-         {
-            Name:'Noorin',
-            Age:'20',
-            Height:'5.5',
-            Gmail:'noorin@gmail.com',
-            ID:'4',
-            Gender:'feMale'
-        },
-         {
-            Name:'Afreeen',
-            Age:'25',
-            Height:'5.2',
-            Gmail:'Afreen@gmail.com',
-            ID:'5',
-            Gender:'feMale'
-        },
-         {
-            Name:'pooja',
-            Age:'25',
-            Height:'6.2',
-            Gmail:'pooja@gmail.com',
-            ID:'6',
-            Gender:'female'
-        },
-         {
-            Name:'kartina',
-            Age:'55',
-            Height:'6.2',
-            Gmail:'katrina@gmail.com',
-            ID:'7',
-            Gender:'feMale'
-        },
-         {
-            Name:'tooba',
-            Age:'15',
-            Height:'6.2',
-            Gmail:'tooba@gmail.com',
-            ID:'8',
-            Gender:'feMale'
-        },
-         {
-            Name:'Ali',
-            Age:'25',
-            Height:'5.2',
-            Gmail:'ali@gmail.com',
-            ID:'9',
-            Gender:'feMale'
-        },
-         {
-            Name:'Alok',
-            Age:'25',
-            Height:'6.2',
-            Gmail:'alok@gmail.com',
-            ID:'10',
-            Gender:'Male'
-        },
-         {
-            Name:'Arshi',
-            Age:'25',
-            Height:'5.2',
-            Gmail:'mine@gmail.com',
-            ID:'11',
-            Gender:'feMale'
-        },
-        
-    ]
+function App(){
+    const  [color, setcolor] = useState("green") 
     return(
         <div>
-            <h1>Reuse component in loop</h1>
-            {
-                userData.map((user)=>(
-                    <div key={user.ID}>
-                     <Use useee = {user} />
-                    </div>
+            <h1>Digital Clock in Reactjs </h1>
+            <select onChange={(e)=>setcolor(e.target.value)} >
+                <option value={"red"}>Red</option>
+                <option value={"pink"}>Pink</option>
+                <option value={"orange"}>Orange</option>
+                <option value={"green"}>Green</option>
+                <option value={"blue"}>BLUE</option>
+            </select>
+            <Clock color={color} />
 
-                ))
-            }
         </div>
     )
 }
-
-export default Appp;
+export default App;
