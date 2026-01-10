@@ -1,106 +1,34 @@
-import Colll from "./collagecom"
+import { useEffect, useState } from "react";
 
-function App(){
-    const collageData = [
-        {
-            name:"IET Alwar",
-            city: "Alwar",
-            Website:"www.iet.com",
-            student:[
-            {
-          Name:'Ankite ',
-          Age:'21',
-          Email:'@ankit.com ' 
-        },
-        {
-          Name:'neha ',
-          Age:'12',
-          Email:'@neha.cpm ' 
-        },
-        {
-          Name:'priyanka ',
-          Age:'255',
-          Email:'@priyanka.com ' 
-        },
-        {
-          Name:' Dholu',
-          Age:'85',
-          Email:'@Dholu.com ' 
-        },
-            ]
-        },
-        {
-            name:"IIT Delhi",
-            city: "Alwar",
-            Website:"www.iet.com",
-            student:[
-            {
-          Name:'Ankite ',
-          Age:'21',
-          Email:'@ankit.com ' 
-        },
-        {
-          Name:'neha ',
-          Age:'12',
-          Email:'@neha.cpm ' 
-        },
-        {
-          Name:'priyanka ',
-          Age:'255',
-          Email:'@priyanka.com ' 
-        },
-        {
-          Name:' Dholu',
-          Age:'85',
-          Email:'@Dholu.com ' 
-        },
-            ]
-        },
-        {
-            name:"SHAYAM LAL",
-            city: "Alwar",
-            Website:"www.iet.com",
-            student:[
-            {
-          Name:'Ankite ',
-          Age:'21',
-          Email:'@ankit.com ' 
-        },
-        {
-          Name:'neha ',
-          Age:'12',
-          Email:'@neha.cpm ' 
-        },
-        {
-          Name:'priyanka ',
-          Age:'255',
-          Email:'@priyanka.com ' 
-        },
-        {
-          Name:' Dholu',
-          Age:'85',
-          Email:'@Dholu.com ' 
-        },
-            ]
-        },
-        
-    ]
-    return(
-      <div>
-        <h1>Nested Looping with component</h1>
-        
-             {
-            collageData.map((coll, index)=>(
-            <div key={index}>
-                <Colll call={coll}/>
-                </div>
-            ))
-             }
-        
+function App() {
 
-        
-      
-      </div>
-    )
+ const [call, setcall]= useState(0); 
+ const [data, setdata]= useState(0); 
+
+  
+   useEffect(()=>{
+    //  callonce();
+    counterFunction();
+   },[data,call])
+  
+   
+   function counterFunction(){
+    console.log(data);
+    
+   }
+
+  function callonce() {
+    console.log("Callone function called");
+
+  }
+ 
+  return (
+    <div>
+      <h1>useEffect Hook</h1>
+     <button onClick={(()=> setcall(call+1))}>counter{call}</button>
+     <button onClick={(()=> setdata(data+1))}>datar{data}</button>
+    </div>
+  )
 }
-export default App
+
+export default App;
