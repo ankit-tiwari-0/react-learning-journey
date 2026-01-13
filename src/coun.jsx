@@ -2,23 +2,37 @@ import { useEffect } from "react";
 
 function Counter({hehe,ff}){
 
-    const HandleCounter=()=>{
-        console.log("handleCOunter called");
-    }
+    // const HandleCounter=()=>{
+    //     console.log("handleCOunter called");
+    // }
 
-    const datacount=()=>{
-        console.log("data")
-    }
+    // const datacount=()=>{
+    //     console.log("data")
+    // }
      
+    // useEffect(()=>{
+    //  HandleCounter();
+     
+    // },[])
+
+    // useEffect(()=>{
+    //     datacount();
+    // },[ff])
+    
     useEffect(()=>{
-     HandleCounter();
-     
+        console.log("mouting phase only")
     },[])
 
     useEffect(()=>{
-        datacount();
-    },[ff])
+        console.log("update phase only")
+    },[hehe])
 
+    useEffect(()=>{
+        return ()=>{
+            console.log("Unmount phase only");
+            
+        }
+    },[])
     
     return(
         <div>
