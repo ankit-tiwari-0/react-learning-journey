@@ -1,0 +1,18 @@
+.heading{
+    color: rgb(182, 16, 16);
+}
+
+.img{
+    width: 200px;
+}
+
+.card{
+    border: 2px solid pink;
+    margin: 10px;
+    box-shadow: 2px 3px 2px rgb(199, 197, 197);
+    width: 200px;
+}
+
+.text{
+    padding: 10px;
+}
