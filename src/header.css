@@ -31,3 +31,8 @@ body{
 .header .link{
     font-size: 20px;
 }
+
+.img{
+    background-color: #e1caca;
+    border-radius: 55px;
+}

@@ -1,10 +1,12 @@
 import { Link } from "react-router";
 import './header.css'
-export default function Navvbar(){
+export default function Nav(){
     return(
       <div className="header">
         <div>
-          <Link className="link" to={"/"}>LOGO</Link>
+          <Link className="link" to={"/"}>
+           <img className="img" width={"50px"} src="https://www.clipartmax.com/png/middle/58-583780_big-image-cool-logos-with-no-background.png" alt="" />
+          </Link>
         </div>
         <div>
              <ul>
@@ -12,10 +14,10 @@ export default function Navvbar(){
                   <Link className="link" to="/">Home</Link>  
                 </li>
                 <li>
-                  <Link className="link" to={"/login"}>Login</Link>  
+                  <Link className="link" to="/about">About</Link>  
                 </li>
                 <li>
-                  <Link className="link" to="/about">About</Link>  
+                  <Link className="link" to={"/login"}>Login</Link>  
                 </li>
              </ul>
         </div>
