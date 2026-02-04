@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import Home from "./hom";
 import About from "./abou";
 import LOgg from "./log";
+import Pagenotfound from "./PageNotfound";
 
 function App(){
 
@@ -14,6 +15,7 @@ function App(){
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/login" element={<LOgg/>} />
+            <Route path="*" element={<Pagenotfound/>} />
         </Routes>
         </>
     )

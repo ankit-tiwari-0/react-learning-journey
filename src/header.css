@@ -1,14 +1,16 @@
 .header{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border: 2px solid rgb(85, 81, 82);
-    background-color: #e1caca;
+    border: 2px solid rgb(99, 96, 96);
+    border-radius: 5px;
+    background-color: #b79595;
+    height: 40px;
 }
 
 body{
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 .header ul{
@@ -35,4 +37,6 @@ body{
 .img{
     background-color: #e1caca;
     border-radius: 55px;
+    background-color: #d29797;
+    padding: 4px;
 }
