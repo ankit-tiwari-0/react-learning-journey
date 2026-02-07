@@ -13,12 +13,17 @@ function App(){
 
     return(
         <>
-        <Nav/>
-        <div style={{ marginTop: "60px", padding: "20px" }}>
-        <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/login" element={<LOgg/>} />
+        {/* <Nav/> */}
+        
+         <Routes>  
+        <Route element={<Nav/>}>
+         <Route path="/about" element={<About/>} />
+         <Route path="/" element={<Home/>} />
+         <Route path="/login" element={<LOgg/>} />
+        </Route>
+
+        
+            
 
             <Route path="/college" element={<College/>}>
               <Route path="student" element={<Student/>}/>
@@ -28,8 +33,6 @@ function App(){
 
             <Route path="*" element={<Pagenotfound/>} />
         </Routes>
-
-        </div>
         </>
     )
 }

@@ -1,8 +1,9 @@
-import { Link } from "react-router";
+import { Link ,Outlet } from "react-router";
 import './header.css'
 export default function Nav(){
     return(
-      <div className="header">
+     <div>
+       <div className="header">
         <div>
           <Link className="link" to={"/"}>
            <img className="img" width={"20px"} src="https://www.clipartmax.com/png/middle/58-583780_big-image-cool-logos-with-no-background.png" alt="" />
@@ -25,5 +26,7 @@ export default function Nav(){
              </ul>
         </div>
       </div>
+        <Outlet/>
+     </div>
     )
 }
