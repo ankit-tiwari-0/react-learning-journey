@@ -2,15 +2,15 @@
     display: flex;
     justify-content: space-between;
     border: 2px solid rgb(99, 96, 96);
-    border-radius: 5px;
-    background-color: #b79595;
+    border-radius: 10px;
+    background-color: #ebd2d2;
     height: 40px;
 }
 
 body{
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: rgb(59, 49, 49);
 }
 
 .header ul{
@@ -18,7 +18,7 @@ body{
     list-style-type: none;
     margin: auto;
     justify-content: space-around;
-    width: 200px;
+    width: 300px;
     
 }
 
@@ -39,4 +39,9 @@ body{
     border-radius: 55px;
     background-color: #d29797;
     padding: 4px;
+}
+
+.College .ink{
+    margin: 10px;
+    font-size: 20;
 }
