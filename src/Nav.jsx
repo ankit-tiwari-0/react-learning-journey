@@ -6,7 +6,7 @@ export default function Nav(){
        <div className="header">
         <div>
           <Link className="link" to={"/"}>
-           <img className="img" width={"20px"} src="https://www.clipartmax.com/png/middle/58-583780_big-image-cool-logos-with-no-background.png" alt="" />
+           <img className="img" width={"29px"} style={{margin:'5px 0px 0 15px'}} src="https://www.clipartmax.com/png/middle/58-583780_big-image-cool-logos-with-no-background.png" alt="" />
           </Link>
         </div>
         <div>
@@ -22,6 +22,9 @@ export default function Nav(){
                 </li>
                 <li>
                   <Link className="link" to={"/college"}>College</Link>  
+                </li>
+                <li>
+                  <Link className="link" to={"/Users"}>Users</Link>  
                 </li>
              </ul>
         </div>

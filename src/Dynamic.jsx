@@ -8,6 +8,8 @@ import College from "./college";
 import Student from "./tudent";
 import Depert from "./Departement";
 import Detail from "./Detail";
+import UserList from "./UserLIst";
+import Userdetail from "./UserDetail";
 
 function App(){
 
@@ -18,6 +20,8 @@ function App(){
          <Routes>  
         <Route element={<Nav/>}>
          <Route path="/" element={<Home/>} />
+         <Route path="/users" element={<UserList/>}/>
+         <Route path="/User/:id" element={<Userdetail/>}/>
          
        
 
