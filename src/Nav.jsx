@@ -15,10 +15,10 @@ export default function Nav(){
                   <Link className="link" to="/">Home</Link>  
                 </li>
                 <li>
-                  <Link className="link" to="/about">About</Link>  
+                  <Link className="link" to="/User/about">About</Link>  
                 </li>
                 <li>
-                  <Link className="link" to={"/login"}>Login</Link>  
+                  <Link className="link" to={"/User/login"}>Login</Link>  
                 </li>
                 <li>
                   <Link className="link" to={"/college"}>College</Link>  

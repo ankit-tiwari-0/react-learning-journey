@@ -17,19 +17,22 @@ function App(){
         
          <Routes>  
         <Route element={<Nav/>}>
-         <Route path="/about" element={<About/>} />
          <Route path="/" element={<Home/>} />
-         <Route path="/login" element={<LOgg/>} />
-        </Route>
+         
+       
 
         
-            
+            <Route path="User">
+            <Route path="/User/about" element={<About/>} />
+             <Route path="/User/login" element={<LOgg/>} />
+            </Route>
 
             <Route path="/college" element={<College/>}>
               <Route path="student" element={<Student/>}/>
               <Route path="Detail" element={<Detail/>}/>
               <Route path="DEpartment" element={<Depert/>}/>
             </Route>
+             </Route>
 
             <Route path="*" element={<Pagenotfound/>} />
         </Routes>
