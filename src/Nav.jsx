@@ -1,33 +1,33 @@
-import { Link ,Outlet } from "react-router";
+import { NavLink ,Outlet } from "react-router";
 import './header.css'
 export default function Nav(){
     return(
      <div>
        <div className="header">
         <div>
-          <Link className="link" to={"/"}>
+          <NavLink className="NavLink" to={"/"}>
            <img className="img" width={"29px"} style={{margin:'5px 0px 0 15px'}} src="https://www.clipartmax.com/png/middle/58-583780_big-image-cool-logos-with-no-background.png" alt="" />
-          </Link>
+          </NavLink>
         </div>
         <div>
              <ul className="hh">
                 <li>
-                  <Link className="link" to="/">Home</Link>  
+                  <NavLink className="Link" to="/">Home</NavLink>  
                 </li>
                 <li>
-                  <Link className="link" to="/User/about">About</Link>  
+                  <NavLink className="Link" to="/User/about">About</NavLink>  
                 </li>
                 <li>
-                  <Link className="link" to={"/User/login"}>Login</Link>  
+                  <NavLink className="Link" to={"/User/login"}>Login</NavLink>  
                 </li>
                 <li>
-                  <Link className="link" to={"/college"}>College</Link>  
+                  <NavLink className="Link" to={"/college"}>College</NavLink>  
                 </li>
                 <li>
-                  <Link className="link" to={"/Users"}>Users</Link>  
+                  <NavLink className="Link" to={"/Users"}>Users</NavLink>  
                 </li>
                 <li>
-                  <Link className="link" to={"/Users/List"}>List</Link>  
+                  <NavLink className="Link" to={"/Users/List"}>List</NavLink>  
                 </li>
              </ul>
         </div>
