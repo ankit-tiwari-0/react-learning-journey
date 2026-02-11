@@ -1,3 +1,33 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+html,body{
+    background-color: black;
+    color: whitesmoke;
+    margin: 10px 15px;
+    font-size: larger;
+}
+
+.ul{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid pink;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    background-color: #2a2929;
+
+}
+.hh{
+    font-size: larger;
+    font-weight: 900;
+    color: burlywood;
+    background-color: black;
+}
+
+.ul li{
+     border: 1px solid pink;
+    flex: 10;
+    text-align: center;
+}
