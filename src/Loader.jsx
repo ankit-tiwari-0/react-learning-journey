@@ -2,7 +2,9 @@ import { useEffect, useState } from "react"
  import './index.css'
 const App = () => {
 const [  UseData, setuser] = useState([])
+const[loading, setloading] = useState(false)
 useEffect(()=>{
+  setloading(true)
   Getuserdata();
 },[])
 
@@ -12,6 +14,7 @@ useEffect(()=>{
     response = await response.json()
     console.log(response);
     setuser(response.users)
+    setloading(false)
     
   }
   return (
@@ -25,6 +28,7 @@ useEffect(()=>{
 
           </ul>
       {
+        !loading?
         UseData &&   UseData.map((user)=>{
           return(
              <ul key={user.id} className="ul">
@@ -34,9 +38,12 @@ useEffect(()=>{
             <li > {user.age} </li>
 
           </ul>
+           
           )
          
+         
         })
+        :<h1>Data Loading...</h1>
       }
 
     </div>
