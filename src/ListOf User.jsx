@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
- import './index.css'
-const App = () => {
+//  import './index.css'
+const UserList = () => {
 const [  UseData, setuser] = useState([])
 const[loading, setloading] = useState(false)
 useEffect(()=>{
@@ -19,22 +19,22 @@ useEffect(()=>{
   }
   return (
     <div >
-      <h1>Fetch data from API</h1>
+        <h2>Create Routes for Add User & User List</h2>
        <ul className="ul hh">
             <li > Name </li>
             <li > Last </li>
-            <li >maid </li>
+            {/* <li >maid </li> */}
             <li > Age </li>
 
           </ul>
       {
         !loading?
-        UseData &&   UseData.map((user)=>{
+        UseData &&   UseData.slice(0, 5).map((user)=>{
           return(
              <ul key={user.id} className="ul">
             <li > {user.firstName} </li>
             <li > {user.lastName} </li>
-            <li > {user.maidenName} </li>
+            {/* <li > {user.maidenName} </li> */}
             <li > {user.age} </li>
 
           </ul>
@@ -51,5 +51,5 @@ useEffect(()=>{
   )
 }
 
-export default App
+export default UserList
 

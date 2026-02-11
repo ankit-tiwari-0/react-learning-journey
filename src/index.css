@@ -12,7 +12,7 @@ html,body{
 .ul{
     display: flex;
     justify-content: space-around;
-    border: 1px solid pink;
+    border: 1px solid rgb(143, 120, 124);
     margin: 0;
     padding: 10px;
     list-style: none;
@@ -22,12 +22,40 @@ html,body{
 .hh{
     font-size: larger;
     font-weight: 900;
-    color: burlywood;
+    color: rgb(165, 156, 144);
     background-color: black;
 }
 
 .ul li{
-     border: 1px solid pink;
+     border: 1px solid rgb(94, 90, 91);
     flex: 10;
     text-align: center;
+}
+
+.nav-list {
+  list-style: none;        /* remove bullets */
+  display: flex;           /* horizontal layout */
+  justify-content: space-around;              /* space between links */
+  padding: 10px 20px;      /* some padding */
+    /* dark background */
+  margin-top: 50px;               /* remove default margin */
+}
+
+.nav-list li a {
+  text-decoration: none;   /* remove underline */
+  color: whitesmoke;       /* link color */
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;      /* rounded hover effect */
+  transition: red 0.3s;
+}
+
+.nav-list li a.active {
+  background-color: pink;  /* active link highlight */
+  color: black;
+}
+
+.nav-list li a:hover {
+  background-color: #555;  /* hover effect */
+  color: white;
 }
