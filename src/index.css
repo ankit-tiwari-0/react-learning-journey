@@ -2,60 +2,91 @@
 @tailwind components;
 @tailwind utilities; */
 
-html,body{
+html, body {
+    height: 100%;
+    margin: 0;
     background-color: black;
     color: whitesmoke;
-    margin: 10px 15px;
     font-size: larger;
-}
 
-.ul{
     display: flex;
-    justify-content: space-around;
-    border: 1px solid rgb(143, 120, 124);
-    margin: 0;
-    padding: 10px;
-    list-style: none;
-    background-color: #2a2929;
-
-}
-.hh{
-    font-size: larger;
-    font-weight: 900;
-    color: rgb(165, 156, 144);
-    background-color: black;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
 }
 
-.ul li{
-     border: 1px solid rgb(94, 90, 91);
-    flex: 10;
-    text-align: center;
+.div {
+    border: 2px solid rgb(129, 122, 122);
+    border-radius: 12px;
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #111;
 }
 
-.nav-list {
-  list-style: none;        /* remove bullets */
-  display: flex;           /* horizontal layout */
-  justify-content: space-around;              /* space between links */
-  padding: 10px 20px;      /* some padding */
-    /* dark background */
-  margin-top: 50px;               /* remove default margin */
+
+.div input {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+    width: 60%;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    
 }
 
-.nav-list li a {
-  text-decoration: none;   /* remove underline */
-  color: whitesmoke;       /* link color */
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;      /* rounded hover effect */
-  transition: red 0.3s;
+.div button {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 30px;
+    width: 30%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    
 }
 
-.nav-list li a.active {
-  background-color: pink;  /* active link highlight */
-  color: black;
+
+
+.div input {
+    background-color: #222;
+    color: white;
+    outline: none;
 }
 
-.nav-list li a:hover {
-  background-color: #555;  /* hover effect */
-  color: white;
+.div input:focus {
+    border: 2px solid rgb(46, 34, 19);
+     transition: 0.3s ease-in-out;
+}
+
+.div .error{
+    border: 2px solid rgb(226, 11, 11);
+     transition: 0.3s ease-in-out;
+}
+
+.div button {
+    background-color: rgb(216, 171, 111);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.div button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+.div button:hover {
+    background-color: rgb(175, 105, 20);
+    transform: scale(1.3);
 }
